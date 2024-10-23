@@ -32,6 +32,12 @@ module.exports = {
             options: { name: '[name].[ext]' }
           }
         }, //for images
+        {
+          test: /\.(mp4|webm|ogg|avi)$/, use: {
+            loader: 'file-loader',
+            options: { name: '[name].[ext]' }
+          }
+        }, //for videos
         { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } //for fonts
     ]
   },
